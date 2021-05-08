@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Restoranai">
+
+
+    <Spinner
+        android:id="@+id/pasirinkt_tipas_suvestine"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/frame2"
+        android:entries="@array/Tipai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_paieskos_tipas" />
+
+    <Spinner
+        android:id="@+id/pasirinkt_miestas_suvestine"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/frame2"
+        android:entries="@array/Miestai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pasirinkt_tipas_suvestine" />
+
+    <Button
+        android:id="@+id/button_filtruoti_suvestine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Filtruoti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suvestine_tekstas" />
+
+    <EditText
+        android:id="@+id/suvestine_tekstas"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/frame2"
+        android:ems="10"
+        android:padding="5dp"
+        android:hint="Paieškos tekstas"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView_suvestine"
+        android:layout_width="409dp"
+        android:layout_height="407dp"
+        android:layout_marginTop="67dp"
+        android:background="@drawable/frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pasirinkt_miestas_suvestine" />
+
+    <Spinner
+        android:id="@+id/spinner_paieskos_tipas"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/frame2"
+        android:entries="@array/Paieskos_tipas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suvestine_tekstas" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

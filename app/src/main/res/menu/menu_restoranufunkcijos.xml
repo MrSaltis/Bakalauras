@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_pridetiMarsrutuos"
+        android:orderInCategory="1"
+        android:title="Pridėti į maršruto sąrašą" />
+
+    <item
+        android:id="@+id/menu_isiminti"
+        android:orderInCategory="2"
+        android:title="Įsiminti" />
+
+</menu>

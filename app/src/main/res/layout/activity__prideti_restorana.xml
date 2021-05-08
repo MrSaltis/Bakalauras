@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Activity_PridetiRestorana">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="85dp">
+
+
+        <EditText
+            android:id="@+id/ed_Aprasymas"
+            android:layout_width="202dp"
+            android:layout_height="138dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:editable="true"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_DarboLaikas" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="Aprašymas:"
+            app:layout_constraintEnd_toStartOf="@+id/ed_Aprasymas"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <EditText
+            android:id="@+id/ed_DarboLaikas"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:editable="true"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_Url" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="Dabo Laikas:"
+            app:layout_constraintEnd_toStartOf="@+id/ed_DarboLaikas"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <EditText
+            android:id="@+id/ed_Url"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:editable="true"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_Pastas" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="URL:"
+            app:layout_constraintEnd_toStartOf="@+id/ed_Pastas"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <EditText
+            android:id="@+id/ed_Pastas"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:editable="true"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_Tel" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="El. paštas:"
+            app:layout_constraintEnd_toStartOf="@+id/ed_Pastas"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <EditText
+            android:id="@+id/ed_Tel"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:editable="true"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_Adresas" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="Tel. nr.:"
+            app:layout_constraintEnd_toStartOf="@+id/ed_Tel"
+            app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+        <EditText
+            android:id="@+id/ed_Adresas"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:editable="true"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_Ycoord" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="Adresas:"
+            app:layout_constraintEnd_toStartOf="@+id/ed_Adresas"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="Pavadinimas:"
+            app:layout_constraintEnd_toStartOf="@+id/ed_pavadinimas"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <Button
+            android:id="@+id/button_sukurti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="40dp"
+            android:text="Sukurti"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_restoranas"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="214dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:text="Pridėti restoraną"
+            android:textAllCaps="false"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/ed_pavadinimas"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:editable="true"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="Tipas:"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_tipas"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+        <Spinner
+            android:id="@+id/spinner_tipas"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:entries="@array/Tipai"
+            android:gravity="start|center_vertical"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_pavadinimas" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="Miestas:"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_miestas"
+            app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+        <Spinner
+            android:id="@+id/spinner_miestas"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:entries="@array/Miestai"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_tipas" />
+
+        <EditText
+            android:id="@+id/ed_Ycoord"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:editable="true"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_Xcoord" />
+
+        <EditText
+            android:id="@+id/ed_Xcoord"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:background="#F1F1F1"
+            android:editable="true"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_miestas" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="XCoord:"
+            app:layout_constraintEnd_toStartOf="@+id/ed_Xcoord"
+            app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|end"
+            android:text="YCoord:"
+            app:layout_constraintEnd_toStartOf="@+id/ed_Ycoord"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <ImageView
+            android:id="@+id/image_restoranas"
+            android:layout_width="330dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="60dp"
+            android:background="#F1F0F0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ed_Aprasymas"
+            app:srcCompat="@drawable/unnamed" />
+
+        <Button
+            android:id="@+id/button_Paveiksliukas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Paveiksliukas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_restoranas" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

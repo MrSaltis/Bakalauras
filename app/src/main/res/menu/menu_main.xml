@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.lab6.MainActivity">
+
+    <item
+    android:id="@+id/menu_profilis"
+    android:orderInCategory="1"
+    android:title="Profilis"
+    app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_pridetiRestorana"
+        android:orderInCategory="2"
+        android:title="Pridėti restoraną"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_isimintiSarasas"
+        android:orderInCategory="3"
+        android:title="Įsimintų Sąrašas"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_marsSarasas"
+        android:orderInCategory="4"
+        android:title="Maršruto Sąrašas"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_suvestine"
+        android:orderInCategory="5"
+        android:title="Suvestinė"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_atsijungti"
+        android:orderInCategory="6"
+        android:title="Atsijungti"
+        app:showAsAction="never" />
+
+
+</menu>
