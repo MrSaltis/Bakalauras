@@ -26,7 +26,7 @@
         app:layout_constraintVertical_bias="0.803" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/text_senasPass"
         android:layout_width="140dp"
         android:layout_height="63dp"
         android:layout_marginEnd="20dp"
@@ -60,7 +60,7 @@
         app:layout_constraintVertical_bias="0.683" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/text_naujasPass"
         android:layout_width="140dp"
         android:layout_height="55dp"
         android:layout_marginEnd="20dp"
@@ -187,7 +187,7 @@
         app:layout_constraintVertical_bias="0.283" />
 
     <TextView
-        android:id="@+id/textview13"
+        android:id="@+id/text_naujasVardas"
         android:layout_width="140dp"
         android:layout_height="50dp"
         android:layout_marginEnd="20dp"
@@ -221,7 +221,7 @@
         app:layout_constraintVertical_bias="0.436" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/text_naujasPastas"
         android:layout_width="140dp"
         android:layout_height="55dp"
         android:layout_marginEnd="20dp"

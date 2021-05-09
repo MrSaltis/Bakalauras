@@ -3,6 +3,7 @@ package com.example.bakalauras;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ public class Activity_Profilis extends AppCompatActivity {
     public EditText editText;
     public static final String EXTRA_INT = "LogIn";
     TextView name, email, role;
+    TextView naujasVard, naujasPastas, naujasPass, senasPass;
     EditText newName, newPastas, newPass, oldPass;
     Button btn_redaguoti;
 
@@ -34,17 +36,34 @@ public class Activity_Profilis extends AppCompatActivity {
 
         Intent intent = getIntent();
         LogIn = intent.getIntExtra(Activity_Restoranai.EXTRA_INT, -1);
+        int type = intent.getIntExtra(VartotojaiAdapter.EXTRA_TYPE, -1);
+        int userID = intent.getIntExtra(VartotojaiAdapter.EXTRA_VARTOTOJAS, -1);
 
-        dataBaseHelper = new DataBaseHelper(Activity_Profilis.this);
-        vartotojas = dataBaseHelper.getUserFullbyID(LogIn);
+        if(type == 1){
+            dataBaseHelper = new DataBaseHelper(Activity_Profilis.this);
+            vartotojas = dataBaseHelper.getUserFullbyID(userID);
+        } else{
+            dataBaseHelper = new DataBaseHelper(Activity_Profilis.this);
+            vartotojas = dataBaseHelper.getUserFullbyID(LogIn);
+        }
 
-        Toast.makeText(this, "Test: " + LogIn, Toast.LENGTH_SHORT).show();
+
+        //Toast.makeText(this, "Test: " + LogIn, Toast.LENGTH_SHORT).show();
 
         name = (TextView) findViewById(R.id.profilis_vardas);
         email = (TextView) findViewById(R.id.profilis_pastas);
         role = (TextView) findViewById(R.id.profilis_role);
+
         newName = (EditText) findViewById(R.id.profilis_newVardas);
         newPastas = (EditText) findViewById(R.id.profilis_newPastas);
+        newPass = (EditText) findViewById(R.id.profilis_newSlaptazodis);
+        oldPass = (EditText) findViewById(R.id.profilis_oldSlaptazodis);
+
+        //tekstiniai slėpimui:
+        naujasVard = (TextView) findViewById(R.id.text_naujasVardas) ;
+        naujasPastas = (TextView) findViewById(R.id.text_naujasPastas);
+        naujasPass = (TextView) findViewById(R.id.text_naujasPass);
+        senasPass = (TextView) findViewById(R.id.text_senasPass);
 
         name.setText(vartotojas.get(0).getVardas());
         email.setText(vartotojas.get(0).getPastas());
@@ -58,13 +77,25 @@ public class Activity_Profilis extends AppCompatActivity {
         newPastas.setText(vartotojas.get(0).getPastas());
 
         btn_redaguoti = (Button) findViewById(R.id.btn_profilis_redaguoti);
+
+        if(type == 1){
+            newName.setVisibility(View.GONE);
+            newPastas.setVisibility(View.GONE);
+            newPass.setVisibility(View.GONE);
+            oldPass.setVisibility(View.GONE);
+            naujasVard.setVisibility(View.GONE);
+            naujasPastas.setVisibility(View.GONE);
+            naujasPass.setVisibility(View.GONE);
+            senasPass.setVisibility(View.GONE);
+            btn_redaguoti.setVisibility(View.GONE);
+        }
+
         btn_redaguoti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                newPass = (EditText) findViewById(R.id.profilis_newSlaptazodis);
-                oldPass = (EditText) findViewById(R.id.profilis_oldSlaptazodis);
 
-                if(newPass != null) {
+
+                if(newPass.length() > 0) {
                     if (vartotojas.get(0).getSlaptazodis().equals(oldPass.getText().toString())) {
                         dataBaseHelper = new DataBaseHelper(Activity_Profilis.this);
 

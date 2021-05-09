@@ -92,7 +92,7 @@ public class Activity_Zemelapis extends AppCompatActivity implements OnMapReadyC
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
         Log.d("mylog", "Added Markers");
-        Toast.makeText(this, Map_Tipas + " " +Miestas + " " + Tipas, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, Map_Tipas + " " +Miestas + " " + Tipas, Toast.LENGTH_SHORT).show();
         if(Map_Tipas == 1){
             // 1 restoranas from info
             dataBaseHelper = new DataBaseHelper(Activity_Zemelapis.this);
@@ -118,7 +118,7 @@ public class Activity_Zemelapis extends AppCompatActivity implements OnMapReadyC
                     moveToCurrentLocation(location);
                 }
                 map.addMarker(place2);
-                new FetchURL(Activity_Zemelapis.this).execute(getUrl(place1.getPosition(), place2.getPosition(), "driving"), "driving");
+                new FetchURL(Activity_Zemelapis.this).execute(getUrl(place1.getPosition(), place2.getPosition(), "walking"), "walking");
                 }
         }
         else if (Map_Tipas == 3){

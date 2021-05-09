@@ -116,6 +116,7 @@ public class VartotojaiAdapter extends RecyclerView.Adapter<VartotojaiAdapter.Vi
             //String item = restoranas.get(itemPosition).getPavadinimas();
             //Toast.makeText(context, item, Toast.LENGTH_SHORT).show();
             //OpenActivity_RestoranoInfo(itemPosition);
+            OpenActivity_Profilis(itemPosition);
         }
     }
 

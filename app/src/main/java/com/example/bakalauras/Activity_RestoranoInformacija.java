@@ -155,20 +155,23 @@ public class Activity_RestoranoInformacija extends AppCompatActivity {
         b_prideti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(komentaras.length() <= 300 && komentaras.length() > 0){
-                    komentarasClass = new Komentaras(-1, LogIn, restoranoid, komentaras.getText().toString());
-                    dataBaseHelper = new DataBaseHelper(Activity_RestoranoInformacija.this);
-                    dataBaseHelper.addKomentaras(komentarasClass);
+                if(LogIn == -1){
+                    Toast.makeText(Activity_RestoranoInformacija.this, "Šiai funkcijai turite būti prisijungęs", Toast.LENGTH_SHORT).show();
+                } else{
+                    if(komentaras.length() <= 300 && komentaras.length() > 0){
+                        komentarasClass = new Komentaras(-1, LogIn, restoranoid, komentaras.getText().toString());
+                        dataBaseHelper = new DataBaseHelper(Activity_RestoranoInformacija.this);
+                        dataBaseHelper.addKomentaras(komentarasClass);
 
-                    Toast.makeText(Activity_RestoranoInformacija.this, "Komentaras pridėtas", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Activity_RestoranoInformacija.this, "Komentaras pridėtas", Toast.LENGTH_SHORT).show();
 
-                    komentarai = dataBaseHelper.getKomentaras(restoranoid);
-                    programAdapter = new KomentaraiAdapter(Activity_RestoranoInformacija.this, komentarai, recyclerView, LogIn);
-                    recyclerView.setAdapter(programAdapter);
-                } else {
-                    Toast.makeText(Activity_RestoranoInformacija.this, "Komentaras perilgas arba tuščias", Toast.LENGTH_SHORT).show();
+                        komentarai = dataBaseHelper.getKomentaras(restoranoid);
+                        programAdapter = new KomentaraiAdapter(Activity_RestoranoInformacija.this, komentarai, recyclerView, LogIn);
+                        recyclerView.setAdapter(programAdapter);
+                    } else {
+                        Toast.makeText(Activity_RestoranoInformacija.this, "Komentaras perilgas arba tuščias", Toast.LENGTH_SHORT).show();
+                    }
                 }
-
             }
         });
 
